@@ -9,8 +9,6 @@ import Prodotti from "./pages/Prodotti";
 // import del layout di ref
 import DefaultLayout from "./layouts/DefaultLayout";
 
-
-import { useState } from 'react'
 import './App.css'
 
 function App() {
