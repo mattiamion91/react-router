@@ -8,11 +8,19 @@ function CardProdotto({ prodotto }) {
                 <img src={image} alt={title} />
             </div>
             <div className="info-prodotto">
-                <p className="nome-prdotto">{title}</p>
-                <p className="prezzo-prodotto">{price}</p>
+                <p className="categoria-prodotto">{category}</p>
+                <h3 className="nome-prodotto">{title}</h3>
+                <div className="rating-container">
+                    <span className="punteggio-prodotto">{rating.rate} punteggio - </span>
+                    <span className="recensioni-prodotto">{rating.count} recensioni</span>
+                </div>
+                {/* per fare in modo che la descrizione non superi i 100 caratteri */}
                 <p className="descrizione-prodotto">{description}</p>
-                <p className="categoria-prdotto">{category}</p>
-                {/* <p className="valutazione-prodotto">{rating}</p> */}
+                <div className="footer-part">
+                    {/* per avere due cifre dopo la virgola */}
+                    <p className="prezzo-prodotto">€{Number(price).toFixed(2)}</p>
+                    <button className="btn-aggiungi">Aggiungi al carrello</button>
+                </div>
             </div>
         </div>
     )
