@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 function CardProdotto({ prodotto }) {
 
-    const { title, price, description, category, image, rating } = prodotto;
+    const { title, price, description, category, image, rating, id } = prodotto;
 
     return (
         <div className="prodotto">
@@ -20,6 +22,8 @@ function CardProdotto({ prodotto }) {
                     {/* per avere due cifre dopo la virgola */}
                     <p className="prezzo-prodotto">€{Number(price).toFixed(2)}</p>
                     <button className="btn-aggiungi">Aggiungi al carrello</button>
+                    {/* uso template literal */}
+                    <button className="btn-dettaglio"><Link to={`/prodotti/${id}`}>DettaglioProdotto</Link></button>         
                 </div>
             </div>
         </div>

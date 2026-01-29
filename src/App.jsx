@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import ChiSiamo from "./pages/ChiSiamo";
 import Prodotti from "./pages/Prodotti";
+import DettaglioProdotto from "./pages/DettaglioProdotto";
 
 // import del layout di ref
 import DefaultLayout from "./layouts/DefaultLayout";
@@ -20,7 +21,10 @@ function App() {
         <Route element={<DefaultLayout />}>
           <Route index element={<Homepage />} />
           <Route path="/chisiamo" element={<ChiSiamo />} />
-          <Route path="/prodotti" element={<Prodotti />} />
+          <Route path="/prodotti">
+            <Route index element={<Prodotti />} />
+            <Route path=":id" element={<DettaglioProdotto />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
