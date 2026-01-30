@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function CardDettaglioProdotto({infoProdotto}) {
 
     //destrutturo
@@ -24,9 +26,9 @@ function CardDettaglioProdotto({infoProdotto}) {
                     <p className="prezzo-prodotto">€{Number(price).toFixed(2)}</p>
                     <button className="btn-aggiungi">Aggiungi al carrello</button>
                     {/* uso template literal */}
-                    {/* <button className="btn-dettaglio"><Link to={`/prodotti/${id}`}>DettaglioProdotto</Link></button>          */}
-                </div>
-            </div>
+                    {/* <button className="btn-dettaglio"><Link to={`/prodotti/${id}`}>DettaglioProdotto</Link></button> */}
+                    </div>
+                </div>                  
         </div>
         </>
     )

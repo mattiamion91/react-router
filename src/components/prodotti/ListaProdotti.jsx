@@ -1,9 +1,6 @@
 import CardProdotto from "./CardProdotto";
 
-
-
 function ListaProdotti({ prodotti }) {
-
     
     return (
         <div className="container">
